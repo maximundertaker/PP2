@@ -9,5 +9,4 @@ def func():
         print(f"Yes, {text} matches the pattern")
     else:
         print(f"No, {text} does not match the pattern")
-
 func()

@@ -3,7 +3,7 @@
 
 class string:
     def getString(self):
-        self.text = input("Enter text: ")
+        self.text = input()
     def printString(self):
         print(self.text.upper())
 
