@@ -9,19 +9,19 @@ pygame.mixer.music.play()
 
 while True:
     key = ord(getch())
-    if key == 27: #ESC
+    if key == 27: #esc
         break
-    if key == 13: #Enter
+    if key == 13: #enter
         pygame.mixer.music.unpause()
-    if key == 32: #Space
+    if key == 32: #space
         pygame.mixer.music.pause()
-    if key == 8: #Backspace
+    if key == 8: #backspace
         pygame.mixer.music.stop()
-    if key == 80: #Down arrow - Next
+    if key == 80: #down arrow - next
         songs = songs[1:] + [songs[0]]
         pygame.mixer.music.load(songs[0])
         pygame.mixer.music.play()
-    if key == 72: #Up arrow - Previous  
+    if key == 72: #up arrow - previous  
         songs = [songs[-1]] + songs[:-1]
         pygame.mixer.music.load(songs[0])
         pygame.mixer.music.play()
