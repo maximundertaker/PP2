@@ -37,8 +37,7 @@ class Snake:
         self.body.insert(0, list(self.head))
 
     def check_collision(self):
-        if (self.head[0] < 0 or self.head[0] >= 20 or 
-            self.head[1] < 0 or self.head[1] >= 15):
+        if (self.head[0] < 0 or self.head[0] >= 20 or self.head[1] < 0 or self.head[1] >= 15):
             return True
         return self.head in self.body[1:]
 
@@ -96,7 +95,7 @@ while True:
     for segment in snake.body: # Draw snake
         pygame.draw.rect(DISPLAYSURF, GREEN, (segment[0]*GRID_SIZE, segment[1]*GRID_SIZE, GRID_SIZE, GRID_SIZE))
     
-    font = pygame.font.SysFont("Arial", 20) # Display score and level
+    font = pygame.font.SysFont("Verdana", 20) # Display score and level
     score_text = font.render(f"Score: {SCORE}", True, WHITE)
     level_text = font.render(f"Level: {LEVEL}", True, WHITE)
     DISPLAYSURF.blit(score_text, (10, 10))
